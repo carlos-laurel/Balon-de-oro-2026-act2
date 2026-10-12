@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balón de Oro 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado-contenido">
+            <div class="marca">
+                <img src="img/logo.jpg" class="logo" alt="Logo">
+                <h1>Balón de Oro 2026</h1>
+                <p>Los candidatos al mejor futbolista del mundo.</p>
+            </div>
+
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#candidatos">Candidatos</a>
+                <a href="#premio">El premio</a>
+                <a href="#contacto">Tu voto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="contenedor hero-contenido">
+                <div class="hero-texto">
+                    <span class="etiqueta">Edición 70</span>
+                    <h2>¿Quién ganará el Balón de Oro 2026?</h2>
+                    <p>Conoce a los candidatos de la temporada 2025-2026 y revisa sus estadísticas.</p>
+                    <a href="#candidatos" class="boton boton-principal">Ver candidatos</a>
+                </div>
+                <div class="hero-imagen">
+                    <div class="tarjeta-destacada">
+                        <i class="fas fa-trophy icono grande"></i>
+                        <h3>Gala en Londres</h3>
+                        <p>La ceremonia se realizará el 26 de octubre de 2026.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="candidatos" class="seccion">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <span>Candidatos</span>
+                    <h2>Los nominados</h2>
+                    <p>Selecciona el botón de cada tarjeta para ver sus estadísticas.</p>
+                </div>
+                <div class="candidatos-grid">
+
+                    <article class="tarjeta-candidato">
+                        <img src="img/mbappe.jpg" class="foto-candidato" alt="Kylian Mbappé">
+                        <h3>Kylian Mbappé</h3>
+                        <p><i class="fas fa-shirt"></i> Real Madrid</p>
+                        <p><i class="fas fa-flag"></i> Francia</p>
+                        <button type="button" class="boton boton-principal btn-candidato" data-modal="modalMbappe"><i class="fas fa-chart-simple"></i>Ver estadísticas</button>
+                    </article>
+
+                    <article class="tarjeta-candidato">
+                        <img src="img/yamal.jpg" class="foto-candidato" alt="Lamine Yamal">
+                        <h3>Lamine Yamal</h3>
+                        <p><i class="fas fa-shirt"></i> FC Barcelona</p>
+                        <p><i class="fas fa-flag"></i> España</p>
+                        <button type="button" class="boton boton-principal btn-candidato" data-modal="modalYamal"><i class="fas fa-chart-simple"></i>Ver estadísticas</button>
+                    </article>
+
+                    <article class="tarjeta-candidato">
+                        <img src="img/kane.jpg" class="foto-candidato" alt="Harry Kane">
+                        <h3>Harry Kane</h3>
+                        <p><i class="fas fa-shirt"></i> Bayern Múnich</p>
+                        <p><i class="fas fa-flag"></i> Inglaterra</p>
+                        <button type="button" class="boton boton-principal btn-candidato" data-modal="modalKane"><i class="fas fa-chart-simple"></i>Ver estadísticas</button>
+                    </article>
+
+                    <article class="tarjeta-candidato">
+                        <img src="img/dembele.jpg" class="foto-candidato" alt="Ousmane Dembélé">
+                        <h3>Ousmane Dembélé</h3>
+                        <p><i class="fas fa-shirt"></i> Paris Saint-Germain</p>
+                        <p><i class="fas fa-flag"></i> Francia</p>
+                        <button type="button" class="boton boton-principal btn-candidato" data-modal="modalDembele"><i class="fas fa-chart-simple"></i>Ver estadísticas</button>
+                    </article>
+
+                    <article class="tarjeta-candidato">
+                        <img src="img/olise.jpg" class="foto-candidato" alt="Michael Olise">
+                        <h3>Michael Olise</h3>
+                        <p><i class="fas fa-shirt"></i> Bayern Múnich</p>
+                        <p><i class="fas fa-flag"></i> Francia</p>
+                        <button type="button" class="boton boton-principal btn-candidato" data-modal="modalOlise"><i class="fas fa-chart-simple"></i>Ver estadísticas</button>
+                    </article>
+
+                    <article class="tarjeta-candidato">
+                        <img src="img/rodri.jpg" class="foto-candidato" alt="Rodri">
+                        <h3>Rodri</h3>
+                        <p><i class="fas fa-shirt"></i> Barcelona</p>
+                        <p><i class="fas fa-flag"></i> España</p>
+                        <button type="button" class="boton boton-principal btn-candidato" data-modal="modalRodri"><i class="fas fa-chart-simple"></i>Ver estadísticas</button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="premio" class="seccion seccion-secundaria">
+            <div class="contenedor">
+                <div class="informacion-grid">
+                    <div>
+                        <span class="etiqueta">Sobre el premio</span>
+                        <h2>Setenta años del Balón de Oro</h2>
+                        <p>El premio lo entrega la revista France Football desde 1956.</p>
+                        <p>El primer ganador fue el inglés Stanley Matthews.</p>
+                    </div>
+                    <div class="panel-caracteristicas">
+                        <div class="caracteristica">
+                            <span><i class="fas fa-location-dot"></i></span>
+                            <div>
+                                <strong>Sede en Londres</strong>
+                                <p>Por primera vez la gala no se celebra en París.</p>
+                            </div>
+                        </div>
+                        <div class="caracteristica">
+                            <span><i class="fas fa-calendar-days"></i></span>
+                            <div>
+                                <strong>26 de octubre</strong>
+                                <p>Fecha en la que se anunciará al ganador.</p>
+                            </div>
+                        </div>
+                        <div class="caracteristica">
+                            <span><i class="fas fa-users"></i></span>
+                            <div>
+                                <strong>Jurado internacional</strong>
+                                <p>Periodistas de los 100 primeros países del ranking FIFA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="contacto">
+            <div class="contenedor">
+                <div class="contacto">
+                    <div>
+                        <span class="etiqueta">Tu voto</span>
+                        <h2>¿Quién merece ganar?</h2>
+                        <p>Elige a tu favorito y selecciona el botón para votar.</p>
+                        <select id="selectVoto">
+                            <option value="">Selecciona un candidato</option>
+                            <option value="Kylian Mbappé">Kylian Mbappé</option>
+                            <option value="Lamine Yamal">Lamine Yamal</option>
+                            <option value="Harry Kane">Harry Kane</option>
+                            <option value="Ousmane Dembélé">Ousmane Dembélé</option>
+                            <option value="Michael Olise">Michael Olise</option>
+                            <option value="Rodri">Rodri</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="button" id="btnVotar" class="boton boton-principal"><i class="fas fa-check-to-slot"></i>Votar</button>
+                        <p id="mensajeVoto" class="mensaje-voto"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contenedor pie-contenido">
+        <p>Balón de Oro 2026</p>
+        <p>Práctica PWA</p>
+        <p id="year"></p>
+    </footer>
+
+    <!-- MODALES: uno por candidato, con sus estadísticas -->
+    <div id="modalMbappe" class="modal">
+        <div class="modal-contenido">
+            <button type="button" class="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <img src="img/mbappe.jpg" class="modal-foto" alt="Kylian Mbappé">
+            <h2>Kylian Mbappé</h2>
+            <p>Real Madrid · Francia</p>
+            <ul class="modal-estadisticas">
+                <li><i class="fas fa-futbol"></i> 25 goles y 5 asistencias en LaLiga (máximo goleador)</li>
+                <li><i class="fas fa-futbol"></i> 15 goles en la Champions League (máximo goleador)</li>
+                <li><i class="fas fa-trophy"></i> Bota de oro del Mundial con 10 goles</li>
+            </ul>
+            <button type="button" class="boton boton-principal aceptar-modal"><i class="fas fa-check"></i>Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalYamal" class="modal">
+        <div class="modal-contenido">
+            <button type="button" class="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <img src="img/yamal.jpg" class="modal-foto" alt="Lamine Yamal">
+            <h2>Lamine Yamal</h2>
+            <p>FC Barcelona · España</p>
+            <ul class="modal-estadisticas">
+                <li><i class="fas fa-trophy"></i> Campeón del Mundial 2026</li>
+                <li><i class="fas fa-trophy"></i> Campeón de LaLiga</li>
+                <li><i class="fas fa-trophy"></i> Campeón de la Supercopa de España</li>
+            </ul>
+            <button type="button" class="boton boton-principal aceptar-modal"><i class="fas fa-check"></i>Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalKane" class="modal">
+        <div class="modal-contenido">
+            <button type="button" class="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <img src="img/kane.jpg" class="modal-foto" alt="Harry Kane">
+            <h2>Harry Kane</h2>
+            <p>Bayern Múnich · Inglaterra</p>
+            <ul class="modal-estadisticas">
+                <li><i class="fas fa-medal"></i> Bota de oro europea con 36 goles</li>
+                <li><i class="fas fa-medal"></i> Medalla de bronce en el Mundial 2026</li>
+                <li><i class="fas fa-medal"></i> Campeón de Bundesliga</li>
+                <li><i class="fas fa-medal"></i> Campeón de la Copa de Alemania</li>
+                <li><i class="fas fa-medal"></i> Campeón de la Supercopa de Alemania</li>
+                
+            </ul>
+            <button type="button" class="boton boton-principal aceptar-modal"><i class="fas fa-check"></i>Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalDembele" class="modal">
+        <div class="modal-contenido">
+            <button type="button" class="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <img src="img/dembele.jpg" class="modal-foto" alt="Ousmane Dembélé">
+            <h2>Ousmane Dembélé</h2>
+            <p>Paris Saint-Germain · Francia</p>
+            <ul class="modal-estadisticas">
+                <li><i class="fas fa-trophy"></i> Campeón de la Champions League</li>
+                <li><i class="fas fa-trophy"></i> Campeón de Ligue 1</li>
+                <li><i class="fas fa-trophy"></i> Campeón de la Copa de Francia</li>
+                <li><i class="fas fa-trophy"></i> Campeón de la Supercopa de Francia y de Europa</li>
+            </ul>
+            <button type="button" class="boton boton-principal aceptar-modal"><i class="fas fa-check"></i>Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalOlise" class="modal">
+        <div class="modal-contenido">
+            <button type="button" class="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <img src="img/olise.jpg" class="modal-foto" alt="Michael Olise">
+            <h2>Michael Olise</h2>
+            <p>Bayern Munich · Alemania</p>
+            <ul class="modal-estadisticas">
+                <li><i class="fas fa-medal"></i> Campeón de Bundesliga</li>
+                <li><i class="fas fa-medal"></i> Campeón de la Copa de Alemania</li>
+                <li><i class="fas fa-medal"></i> Campeón de la Supercopa de Alemania</li>
+            </ul>
+            <button type="button" class="boton boton-principal aceptar-modal"><i class="fas fa-check"></i>Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalRodri" class="modal">
+        <div class="modal-contenido">
+            <button type="button" class="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <img src="img/rodri.jpg" class="modal-foto" alt="Rodri">
+            <h2>Rodri</h2>
+            <p>Barcelona · España</p>
+            <ul class="modal-estadisticas">
+                <li><i class="fas fa-trophy"></i> Campeón del Mundial 2026</li>
+                <li><i class="fas fa-trophy"></i> Balon de Oro del Mundial 2026</li>
+                <li><i class="fas fa-trophy"></i> Campeón de FA Cup</li>
+                <li><i class="fas fa-trophy"></i> Campeón del Carabao Cup</li>
+                
+            </ul>
+            <button type="button" class="boton boton-principal aceptar-modal"><i class="fas fa-check"></i>Cerrar</button>
+        </div>
+    </div>
+
+    
+
+    <script src="js/app.js"></script>
+</body>
+</html>

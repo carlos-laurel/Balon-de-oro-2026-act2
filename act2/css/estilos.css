@@ -1,0 +1,514 @@
+/* =========================================
+   VARIABLES DE COLOR Y ESTILO
+========================================= */
+:root {
+    --color-fondo: #0a0a0a;          /* Negro profundo */
+    --color-superficie: #1a1a1a;     /* Gris muy oscuro para tarjetas */
+    --color-dorado: #d4af37;         /* Dorado brillante */
+    --color-dorado-oscuro: #b5952f;  /* Dorado oscuro para hover */
+    --color-texto: #ffffff;          /* Blanco */
+    --color-texto-mutado: #a0a0a0;   /* Gris claro para textos secundarios */
+    --borde-dorado: 1px solid var(--color-dorado);
+    --fuente-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   ESTILOS GENERALES
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   BOTONES Y ETIQUETAS
+========================================= */
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.boton-principal {
+    background-color: var(--color-dorado);
+    color: #000000;
+}
+
+.boton-principal:hover {
+    background-color: var(--color-dorado-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+.boton i {
+    margin-right: 8px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.2);
+    color: var(--color-dorado);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+========================================= */
+.encabezado {
+    background-color: rgba(10, 10, 10, 0.95);
+    border-bottom: var(--borde-dorado);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.encabezado-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    filter: drop-shadow(0 0 5px var(--color-dorado));
+}
+
+.marca h1 {
+    font-size: 1.5rem;
+    color: var(--color-dorado);
+    margin: 0;
+}
+
+.marca p {
+    display: none; /* Oculto en móbiles para ahorrar espacio */
+    font-size: 0.9rem;
+    color: var(--color-texto-mutado);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--color-dorado);
+}
+
+/* =========================================
+   SECCIÓN HERO (INICIO)
+========================================= */
+.hero {
+    padding: 80px 0;
+    background: radial-gradient(circle at center, #1f1a08 0%, var(--color-fondo) 70%);
+}
+
+.hero-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 1.2rem;
+    color: var(--color-texto-mutado);
+    margin-bottom: 30px;
+}
+
+.hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-destacada {
+    background-color: var(--color-superficie);
+    border: var(--borde-dorado);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.icono.grande {
+    font-size: 4rem;
+    color: var(--color-dorado);
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+}
+
+/* =========================================
+   SECCIONES GENERALES
+========================================= */
+.seccion {
+    padding: 80px 0;
+}
+
+.seccion-secundaria {
+    background-color: #111111;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-seccion span {
+    color: var(--color-dorado);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+/* =========================================
+   TARJETAS DE CANDIDATOS (GRID)
+========================================= */
+.candidatos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-candidato {
+    background-color: var(--color-superficie);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+}
+
+.tarjeta-candidato:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+    border-color: var(--color-dorado);
+}
+
+.foto-candidato {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-dorado);
+    margin-bottom: 20px;
+}
+
+.tarjeta-candidato h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--color-dorado);
+}
+
+.tarjeta-candidato p {
+    color: var(--color-texto-mutado);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.tarjeta-candidato p i {
+    width: 20px;
+    color: var(--color-texto);
+}
+
+.tarjeta-candidato .btn-candidato {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* =========================================
+   SECCIÓN EL PREMIO
+========================================= */
+.informacion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.panel-caracteristicas {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.caracteristica {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: var(--color-superficie);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-dorado);
+}
+
+.caracteristica span i {
+    font-size: 1.8rem;
+    color: var(--color-dorado);
+}
+
+.caracteristica strong {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.caracteristica p {
+    color: var(--color-texto-mutado);
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   SECCIÓN CONTACTO / VOTO
+========================================= */
+.contacto {
+    background: linear-gradient(135deg, var(--color-superficie) 0%, #000000 100%);
+    border: var(--borde-dorado);
+    border-radius: 15px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+select#selectVoto {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+select#selectVoto:focus {
+    border-color: var(--color-dorado);
+}
+
+#btnVotar {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.mensaje-voto {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-dorado);
+}
+
+/* =========================================
+   PIE DE PÁGINA (FOOTER)
+========================================= */
+.pie-contenido {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #333;
+    color: var(--color-texto-mutado);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   VENTANAS MODALES
+========================================= */
+.modal {
+    display: none; /* Oculto por defecto, JavaScript añadirá la clase .activo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: var(--color-superficie);
+    border: 2px solid var(--color-dorado);
+    border-radius: 15px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+    animation: aparecer 0.3s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--color-texto-mutado);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar-modal:hover {
+    color: var(--color-dorado);
+}
+
+.modal-foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-dorado);
+    margin-bottom: 20px;
+}
+
+.modal-contenido h2 {
+    color: var(--color-dorado);
+    margin-bottom: 5px;
+}
+
+.modal-contenido p {
+    color: var(--color-texto-mutado);
+    margin-bottom: 20px;
+}
+
+.modal-estadisticas {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.modal-estadisticas li {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 3px solid var(--color-dorado);
+}
+
+.modal-estadisticas li i {
+    color: var(--color-dorado);
+    margin-right: 10px;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO (MEDIA QUERIES)
+========================================= */
+@media (max-width: 992px) {
+    .hero-texto h2 {
+        font-size: 2.5rem;
+    }
+    
+    .informacion-grid, 
+    .contacto {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .encabezado-contenido {
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tarjeta-destacada {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .marca p {
+        display: block; /* Muestra el texto del logo en pantallas grandes */
+    }
+}
